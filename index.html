@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+
+        <!-- Robot Image -->
+        <div class="robot-section">
+            <img src="your-image.png" alt="Robot" class="robot">
+            <div class="speech-bubble">
+                <p>Hello! I'm here to help you convert your units. Just select the type of unit and the values you want to convert!</p>
+            </div>
+        </div>
+
+        <label for="unitType">Select unit type:</label>
+        <select id="unitType" onchange="populateUnits()">
+            <option value="length">Length</option>
+            <option value="weight">Weight</option>
+            <option value="temperature">Temperature</option>
+        </select>
+
+        <div id="converter">
+            <input type="number" id="inputValue" placeholder="Enter value">
+            <select id="fromUnit"></select>
+            <select id="toUnit"></select>
+            <button onclick="convert()">Convert</button>
+        </div>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
